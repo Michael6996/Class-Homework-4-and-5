@@ -1,35 +1,16 @@
 import java.util.Scanner;
 
 public class App{
-    public static void main(String[] args) throws Exception {
-
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input your query");
+        String str = "User Input";
+        String result = "";
 
-        System.out.println("Enter -1 to exit the program. \n");
-
-        String query = scanner.nextLine();
-        Reversed(query);
-
-        scanner.close();  
-
-
-    }
-    public static void Reversed(String choice) {
-
-        Scanner scanner = new Scanner(System.in);
-
-        String Reverse(String str) {
-            String reverse = "";
-            int length = str.length();
-            for( int i = length - 1 ; i >= 0 ; i-- ) {
-               reverse = reverse + str.charAt(i);
-            }
-        
-            return reverse;
-        }
+        for(int i = str.length() -1; i>=0; i--)
+        result+=str.charAt(i);
+        System.out.println(result);
         scanner.close();
     }
-
-
+    
 }
+    
